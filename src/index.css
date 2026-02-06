@@ -11,3 +11,38 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/* ===== GLOBAL: stop iOS right-side white gutter / page overflow ===== */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #071426; /* match site dark bg */
+}
+
+/* CRA root wrapper */
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  background: #071426;
+}
+
+/* Helps prevent sideways “bounce” showing white on iOS */
+body {
+  overscroll-behavior-x: none;
+}
+
+/* Safety: make widths predictable */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
