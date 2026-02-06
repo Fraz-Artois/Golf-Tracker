@@ -1,0 +1,169 @@
+/* ================= PAGE ================= */
+.round-container {
+  background:
+    linear-gradient(rgba(15,25,45,0.45), rgba(70,85,120,0.35)),
+    url("../assets/round-bg.jpg") center/70% no-repeat;
+  background-attachment: fixed;
+  color: #f5f7fb;
+  font-family: "Poppins", sans-serif;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+/* ================= ROUND TITLE (TOP BUBBLE) ================= */
+.round-title {
+  display: block;
+  width: fit-content;
+  margin: 0 auto 40px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  border: 2px solid #f7d87c;
+  background: rgba(25,40,70,0.55);
+  font-size: 2rem;
+  font-weight: 600;
+  color: #f7d87c;
+  text-shadow: 0 0 8px rgba(0,0,0,0.6);
+  box-shadow:
+    0 4px 20px rgba(0,0,0,0.45),
+    inset 0 0 14px rgba(247,216,124,0.12);
+}
+
+/* ================= SECTIONS ================= */
+.section {
+  margin-bottom: 48px;
+}
+
+/* ================= TABLE TITLE BUBBLES ================= */
+.section h2 {
+  display: inline-block;
+  padding: 8px 22px;
+  margin-bottom: 22px;
+
+  background: rgba(25, 40, 70, 0.65);
+  border: 2px solid rgba(247, 216, 124, 0.7);
+  border-radius: 999px;
+
+  color: #f7d87c;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+
+  text-shadow: 0 0 6px rgba(0,0,0,0.6);
+  box-shadow:
+    0 4px 16px rgba(0,0,0,0.45),
+    inset 0 0 12px rgba(247,216,124,0.08);
+}
+
+/* Center table title bubbles on mobile */
+@media (max-width: 900px) {
+  .section h2 {
+    display: block;
+    width: fit-content;
+    margin: 0 auto 18px;
+    font-size: 1rem;
+  }
+}
+
+/* ================= TABLE CARDS ================= */
+.table-block {
+  background: rgba(8,27,55,0.92);            /* dark navy */
+  border: 2px solid rgba(165,196,243,0.35);  /* blue frame */
+  border-radius: 14px;
+  padding: 16px;
+  overflow: auto;
+  box-shadow: 0 3px 20px rgba(0,0,0,0.4);
+}
+
+/* ================= RESULTS (TOP TABLE CARD) ================= */
+.section:first-of-type .table-block {
+  background: linear-gradient(135deg, #1f2d45, #0e1625);
+  border: 2px solid #f7d87c;
+  box-shadow: 0 8px 36px rgba(0,0,0,0.5);
+}
+
+/* ================= TABLE BASE ================= */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  color: #f1f4f9;
+  font-size: 0.9rem;
+}
+
+td {
+  padding: 8px 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* ================= HEADER CELLS (GOLD BAND) ================= */
+.header-cell {
+  background: rgba(247,216,124,0.18);
+  color: #f7d87c;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Alternating rows */
+tr:nth-child(even) td {
+  background: rgba(255,255,255,0.04);
+}
+
+/* ================= RESULTS TABLE SMALLER ================= */
+.table--results td {
+  font-size: 0.72rem;
+  padding: 5px 7px;
+}
+
+/* ================= SCROLL SUPPORT (kept for other rounds if needed) ================= */
+.tableScroll {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.tableScroll .table-block {
+  display: inline-block;
+  width: max-content;
+}
+
+.tableScroll table {
+  width: max-content;
+  min-width: 520px;
+}
+
+/* ================= MOBILE ================= */
+@media (max-width: 900px) {
+  .round-container {
+    padding: 20px 12px;
+  }
+
+  /* Only big tables get forced width */
+  .section:not(:first-of-type) table {
+    min-width: 700px;
+  }
+
+  .table--results td {
+    font-size: 0.68rem;
+  }
+}
+/* ================= MATCHPLAY COLOURS =================
+   3 = WINNER (GOLD)
+   2 = 2nd (SILVER)
+   1 = 3rd (BRONZE)
+======================================================= */
+
+td.mp-gold {
+  background: rgba(255, 215, 0, 0.28) !important;
+  color: #bfc1c5 !important;
+  font-weight: 800 !important;
+}
+
+td.mp-silver {
+  background: rgba(192, 192, 192, 0.22) !important;
+  color: #bfc1c5 !important;
+  font-weight: 800 !important;
+}
+
+td.mp-bronze {
+  background: rgba(205, 127, 50, 0.22) !important;
+  color: #bfc1c5 !important;
+  font-weight: 800 !important;
+}
